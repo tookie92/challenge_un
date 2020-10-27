@@ -1,6 +1,8 @@
+import 'package:challenge_un/screens/second_screen.dart';
 import 'package:challenge_un/widgets/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 
 
@@ -217,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: Icon(Icons.arrow_forward_ios),
                 iconSize: 20.0,
                 color: Colors.black,
-                onPressed: () => Navigator.pushNamed(context, 'second'),
+                onPressed: () => Navigator.push(context, PageTransition(child: SecondScreen(), type: PageTransitionType.scale,alignment: Alignment.bottomCenter ,duration: Duration(milliseconds: 1000)), ),
               )
           ),
 
