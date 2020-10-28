@@ -1,4 +1,6 @@
 import 'package:challenge_un/models/bike_model.dart';
+import 'package:challenge_un/screens/user_screen.dart';
+import 'package:challenge_un/widgets/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,12 +70,15 @@ class _DetailPageState extends State<DetailPage> {
                     Positioned(
                       bottom: 70.0,
                         right: 20.0,
-                        child: Text(
-                            'Buy Now',
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 20.0,
-                            color: widget.bikeModel.color
+                        child: GestureDetector(
+                          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder:(_) => UserScreen())),
+                          child: Text(
+                              'Buy Now',
+                            style: GoogleFonts.roboto(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 20.0,
+                              color: widget.bikeModel.color
+                            ),
                           ),
                         )
                     ),
@@ -162,11 +167,34 @@ class _DetailPageState extends State<DetailPage> {
                     icon: Icon(Icons.shopping_cart_outlined),
                     color: Colors.grey,
                     iconSize: 30.0,
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> UserScreen())),
                   ),
                 ],
               )
           ),
+
+          Positioned(
+              top: 40.0,
+              right: 18.0,
+              child: Container(
+                height: 20.0,
+                width: 20.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppColors.yellowColor,
+                ),
+                child: Center(
+                  child: Text(
+                    '2',
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 9.0
+                    ),
+                  ),
+                ),
+              )
+          ),
+
 
           Positioned(
             top: 100.0,

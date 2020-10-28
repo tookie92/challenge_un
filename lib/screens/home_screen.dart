@@ -117,37 +117,27 @@ class _HomeScreenState extends State<HomeScreen> {
 
            Positioned(
               bottom: 25.0,
-                left: 180.0,
+                left: 140.0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height:10.0,
-                      width: 10.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xff014f15),
-                        shape: BoxShape.circle,
+                    RaisedButton.icon(
+                      color:AppColors.greenColor,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+
                       ),
-                    ),
-                    SizedBox(width: 5.0,),
-                    Container(
-                      height:10.0,
-                      width: 10.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xfffb930b),
-                        shape: BoxShape.circle,
+                      label: Text(
+                        'Click here',
                       ),
-                    ),
-                    SizedBox(width: 5.0,),
-                    Container(
-                      height:10.0,
-                      width: 10.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xffba2210),
-                        shape: BoxShape.circle,
+                      icon: Icon(
+                        Icons.arrow_forward,
+                        size: 20.0,
                       ),
-                    ),
-                    SizedBox(width: 5.0,),
+                      onPressed: () => Navigator.push(context, PageTransition(child: SecondScreen(), type: PageTransitionType.scale,alignment: Alignment.bottomCenter ,duration: Duration(milliseconds: 1000)), ),
+
+                    )
 
                   ],
                 )
@@ -212,16 +202,6 @@ class _HomeScreenState extends State<HomeScreen> {
         )
       ),
 
-          Positioned(
-            bottom: 15.0,
-              right: 8.0,
-              child: IconButton(
-                icon: Icon(Icons.arrow_forward_ios),
-                iconSize: 20.0,
-                color: Colors.black,
-                onPressed: () => Navigator.push(context, PageTransition(child: SecondScreen(), type: PageTransitionType.scale,alignment: Alignment.bottomCenter ,duration: Duration(milliseconds: 1000)), ),
-              )
-          ),
 
         ],
       ),
