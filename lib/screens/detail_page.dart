@@ -1,4 +1,5 @@
 import 'package:challenge_un/models/bike_model.dart';
+import 'package:challenge_un/models/data.dart';
 import 'package:challenge_un/screens/user_screen.dart';
 import 'package:challenge_un/widgets/app_colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -185,7 +186,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
                 child: Center(
                   child: Text(
-                    '2',
+                    '${currentUser.bikes.length}',
                     style: GoogleFonts.montserrat(
                       fontWeight: FontWeight.w400,
                       fontSize: 9.0

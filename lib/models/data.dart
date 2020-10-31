@@ -3,7 +3,7 @@ import 'package:challenge_un/models/user_model.dart';
 import 'package:challenge_un/widgets/app_colors.dart';
 
 final currentUser = User(
-  name: "Joseph Ikinda",
+  name: "Papa Jo",
   location: "koblenz",
   bikes: [
     BikeModel(
@@ -22,6 +22,15 @@ final currentUser = User(
       description:
       ' Lorem ipsum dolor sit amet consectetur, \n adipiscing elit cum imperdiet scelerisque, \n dictum rhoncus torquent penatibus.',
       price: 184,
+      color: AppColors.greenColor,
+      imgPath: 'deux.png',
+    ),
+    BikeModel(
+      id: 3,
+      name: "Mountain Bike",
+      description:
+      ' Lorem ipsum dolor sit amet consectetur, \n adipiscing elit cum imperdiet scelerisque, \n dictum rhoncus torquent penatibus.',
+      price: 200,
       color: AppColors.greenColor,
       imgPath: 'deux.png',
     ),

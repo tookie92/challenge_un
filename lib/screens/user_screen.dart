@@ -1,5 +1,4 @@
 import 'package:challenge_un/models/bike_model.dart';
-import 'package:challenge_un/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:challenge_un/widgets/app_colors.dart';
 import 'package:challenge_un/models/data.dart';
@@ -59,9 +58,9 @@ class _UserScreenState extends State<UserScreen> {
                 ),
                 SizedBox(height: 8.0,),
                 Container(
-                  height: 300,
+                  height: 370,
                   child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: BouncingScrollPhysics(),
                     itemCount: currentUser.bikes.length,
                     itemBuilder: (BuildContext context, int index){
                       BikeModel bikeModel = currentUser.bikes[index];
@@ -69,6 +68,7 @@ class _UserScreenState extends State<UserScreen> {
                     },
                   ),
                 ),
+                SizedBox(height: 30.0,),
                 Container(
                   height: 50.0,
                   child: Divider(
@@ -89,7 +89,7 @@ class _UserScreenState extends State<UserScreen> {
                             letterSpacing: 1.2
                         ),
                       ),
-                      Text('368 \$',
+                      Text('568 \$',
                         style: GoogleFonts.montserrat(
                             fontSize: 20.0,
                             fontWeight: FontWeight.w600,
